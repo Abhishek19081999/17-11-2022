@@ -41,16 +41,11 @@ movie_id – int
 package com.hibernate.jpa.demo;
 
 import java.util.ArrayList;
-
 import java.util.List;
 import java.util.Optional;
-
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-
 import javax.persistence.Persistence;
-
 import org.hibernate.HibernateException;
 
 public class Main {

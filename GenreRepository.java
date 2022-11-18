@@ -2,7 +2,6 @@ package com.hibernate.jpa.demo;
 
 import java.util.List;
 import java.util.Optional;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
@@ -44,14 +43,12 @@ public class GenreRepository {
 
 	      entityManager.persist(genre);
 	      
-	      //transaction.commit();
-	      //return genre;
 	    } 
 	    catch (final HibernateException e) {
 	      if (transaction != null) {
 	        transaction.rollback();
 	      }
-	      //return null;
+	    
 	      
 	      throw e;
 	    }
@@ -59,7 +56,7 @@ public class GenreRepository {
 	    	if (transaction != null) {
 		        transaction.rollback();
 		    }
-		    //return null;
+		  
 		      
 		    throw e;
 		}
@@ -72,6 +69,7 @@ public class GenreRepository {
 	    return genre;
 	  }
 
+	
 	  public void remove(final Genre genre) {
 	    EntityTransaction transaction = null;
 	    try {

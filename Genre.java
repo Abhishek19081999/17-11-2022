@@ -1,7 +1,6 @@
 package com.hibernate.jpa.demo;
 
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,6 +15,7 @@ import javax.persistence.Table;
 
 public class Genre {
 
+   //3.	The identifier for each class should be automatically generated.
   @Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   @Column(name = "id")
@@ -24,6 +24,7 @@ public class Genre {
   @Column(name = "name")
   private String name;
 
+  //4.	Implement @OneToMany between Genre and Movie
   @OneToMany
   @JoinColumn(name = "genre_id")
   private List<Movie> movies;

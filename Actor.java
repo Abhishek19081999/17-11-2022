@@ -41,7 +41,7 @@ public class Actor {
 
 	public Actor() {
 		super();
-		// TODO Auto-generated constructor stub
+	
 	}
 
 	public Actor(long id, String name, String lastName, int yearOfBirth, List<Movie> movies) {
@@ -105,7 +105,7 @@ public class Actor {
 	@Override
 	public String toString() {
 		return "Actor [id=" + id + ", name=" + name + ", lastName=" + lastName + ", yearOfBirth=" + yearOfBirth + "]";
-				//+ ", movies=" + movies + "]";
+				
 	}
 }
 

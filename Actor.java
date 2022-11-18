@@ -1,8 +1,8 @@
+
 package com.hibernate.jpa.demo;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,6 +33,8 @@ public class Actor {
   @Column(name = "year_of_birth")
   private int yearOfBirth;
 
+  
+  //5.	Implememt @ManyToMany between the Actor and Movie entities
   @ManyToMany (cascade = CascadeType.ALL)
   @JoinTable(name = "actors_to_movies",
       joinColumns = @JoinColumn(name = "movie_id", referencedColumnName = "id"),
@@ -41,7 +43,7 @@ public class Actor {
 
 	public Actor() {
 		super();
-	
+		
 	}
 
 	public Actor(long id, String name, String lastName, int yearOfBirth, List<Movie> movies) {
